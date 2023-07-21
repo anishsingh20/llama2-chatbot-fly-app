@@ -1,8 +1,6 @@
-# LLaMA 2 Chatbot App
+# LLaMA 2 Chatbot Streamlit Web App
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/a16z-infra/llama2-chatbot?quickstart=1)
-
-This is an experimental Streamlit chatbot app built for LLaMA2 (or any other LLM). The app includes session chat history and provides an option to select multiple LLaMA2 API endpoints on Replicate. 
+This is an experimental Streamlit chatbot web app built for LLaMA2 (or any other LLM). The app includes session chat history and provides an option to select multiple LLaMA2 API endpoints on Replicate. 
 
 You can test the LLaMA 7B, 13B & 70B chat models and this app in https://LLaMA2.ai
 
@@ -35,14 +33,6 @@ You can test the LLaMA 7B, 13B & 70B chat models and this app in https://LLaMA2.
 2. `fly launch` -> this will generate a fly.toml for you automatically
 3. `fly deploy --dockerfile Dockerfile` --> this will automatically package up the repo and deploy it on fly. If you have a free account, you can use `--ha=false` flag to only spin up one instance
 4. Go to your deployed fly app dashboard, click on `Secrets` from the left hand side nav, and click on `Use the Web CLI to manage your secrets without leaving your browser`. Once you are on your app's web CLI, export all secrets needed. i.e `export REPLICATE_API_TOKEN=your_replicate_token`. Refer to .env.example file for necessary secrets. 
-
-## Authors
-
-- Marco Mascorro - [@mascobot](https://twitter.com/Mascobot)
-- Yoko Li - [@stuffyokodraws](https://twitter.com/stuffyokodraws)
-- Rajko Radovanović - [@rajko_rad](https://twitter.com/rajko_rad)
-- Matt Bornstein - [@BornsteinMatt](https://twitter.com/BornsteinMatt)
-- Guido Appenzeller - [@appenz](https://twitter.com/appenz)
 
 ## Version
 
