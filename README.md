@@ -1,3 +1,5 @@
+![GIthub_bg_black](https://github.com/anishsingh20/llama2-chatbot-streamlit-fly-webapp/assets/15655876/27385cf4-dad2-4d88-989c-c882ea69a860)
+
 # LLaMA 2 Chatbot Streamlit Web App
 
 This is an experimental Streamlit chatbot web app built for LLaMA2 (or any other LLM). The app includes session chat history and provides an option to select multiple LLaMA2 API endpoints on Replicate. 
@@ -47,10 +49,6 @@ This project is under development. Contributions are welcome!
 - Web chatbot license (this repo): Apache 2.0
 - For the LLaMA models license, please refer to the License Agreement from Meta Platforms, Inc.
 
-## Acknowledgements
-
-- Special thanks to the team at Meta AI, Replicate, a16z-infra and the entire open-source community.
-
 ## Disclaimer
 
 This is an experimental version of the app. Use at your own risk. While the app has been tested, the authors hold no liability for any kind of losses arising out of using this application. 
@@ -63,3 +61,7 @@ The app has been styled and configured for a cleaner look. Main menu and footer 
 
 - [Streamlit Cheat Sheet](https://docs.streamlit.io/library/cheatsheet)
 - [GitHub to deploy LLaMA2 on Replicate](https://github.com/a16z-infra/cog-llama-template)
+
+
+
+
