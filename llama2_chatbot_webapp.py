@@ -30,11 +30,13 @@ linked_in_logo = "https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-lin
 insta_logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
 
 ###Initial UI configuration:###
-st.set_page_config(page_title="LLaMA2 ChatBot Webapp by Anish Singh Walia", page_icon=logo1 , layout="wide")
+st.set_page_config(page_title="LLaMA2 ChatBot | By Anish Singh Walia", page_icon=logo1 , layout="wide")
 
-st.title('LLamA2 ChatBot WebApp using Streamlit :sunglasses:')
-st.text("Made with love by - Anish Singh Walia")
+st.title('LLamA2 ChatBot WebApp using Streamlit in Python :sunglasses:')
+st.write("Made with love by - [Anish Singh Walia](https://anishsinghwalia.medium.com/)")
 
+
+# adding custom CSS from the file
 with open( "./static/style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
@@ -49,9 +51,12 @@ custom_css = """
 st.markdown(custom_css, unsafe_allow_html=True)
 
 
-st.sidebar.header("LLaMA2 Webapp Chatbot in Streamlit")#Left sidebar menu
-st.sidebar.markdown('**Anish Singh Walia**')
-st.sidebar.markdown('**(Chatbot UI not associated with Meta Platforms, Inc)**')
+st.sidebar.header("LLaMA2 Webapp Chatbot")#Left sidebar menu
+st.sidebar.write("[Mode details on LLaMA2 by Meta](https://ai.meta.com/llama/#inside-the-model)")
+st.sidebar.write("[Know more about the model's parameters below](https://anishsinghwalia.medium.com/model-parameters-in-openai-api-161a5b1f8129)")
+st.sidebar.write("[Deploy your own ChatGPT bot assistant MacOS terminal](https://anishsinghwalia.medium.com/build-and-deploy-your-personal-chatgpt-bot-in-python-with-chatgpt-api-on-macos-951a16aaaff7)")
+
+
 
 #Set config for a cleaner menu, footer & background:
 hide_streamlit_style = """
@@ -108,7 +113,8 @@ st.session_state['temperature'] = st.sidebar.slider('Temperature:', min_value=0.
 st.session_state['top_p'] = st.sidebar.slider('Top P:', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
 st.session_state['max_seq_len'] = st.sidebar.slider('Max Sequence Length:', min_value=64, max_value=4096, value=2048, step=8)
 
-NEW_P = st.sidebar.text_area('Prompt before the chat starts. Edit here if desired:', PRE_PROMPT, height=60)
+
+NEW_P = st.sidebar.text_area('Prompt before the chat starts. Edit here if desired:(Set the context)', PRE_PROMPT, height=60)
 if NEW_P != PRE_PROMPT and NEW_P != "" and NEW_P != None:
     st.session_state['pre_prompt'] = NEW_P + "\n\n"
 else:
