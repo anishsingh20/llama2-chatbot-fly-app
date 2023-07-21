@@ -21,6 +21,7 @@ import os
 from utils import debounce_replicate_run
 
 
+
 # Add your own logo
 logo1 = 'https://miro.medium.com/v2/resize:fit:180/1*ypRBA86IBBbZbti76vm4Hg.png'
 logo2 = "https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Medium_svg5-512.png"
@@ -31,13 +32,18 @@ insta_logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagra
 ###Initial UI configuration:###
 st.set_page_config(page_title="LLaMA2 ChatBot Webapp by Anish Singh Walia", page_icon=logo1 , layout="wide")
 
+st.title('LLamA2 ChatBot WebApp using Streamlit :sunglasses:')
+st.text("Made with love by - Anish Singh Walia")
+
+with open( "./static/style.css" ) as css:
+    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 
 # reduce font sizes for input text boxes
 custom_css = """
     <style>
-        .stTextArea textarea {font-size: 16px;}
-        div[data-baseweb="select"] > div {font-size: 16px !important;}
+        .stTextArea textarea {font-size: 13px; font-family: 'Montserrat' }
+        div[data-baseweb="select"] > div {font-size: 13px !important; font-family: 'Montserrat'}
     </style>
 """
 st.markdown(custom_css, unsafe_allow_html=True)
